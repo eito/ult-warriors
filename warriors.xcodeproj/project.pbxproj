@@ -11,6 +11,28 @@
 		4B0B5BC027DC791C005EB4D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BBF27DC791C005EB4D3 /* ContentView.swift */; };
 		4B0B5BC227DC791E005EB4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0B5BC127DC791E005EB4D3 /* Assets.xcassets */; };
 		4B0B5BC527DC791E005EB4D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0B5BC427DC791E005EB4D3 /* Preview Assets.xcassets */; };
+		4B0B5BCC27DC7941005EB4D3 /* Warriors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCB27DC7941005EB4D3 /* Warriors.swift */; };
+		4B0B5BCE27DD33C1005EB4D3 /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCD27DD33C1005EB4D3 /* StandingsView.swift */; };
+		4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCF27DD3532005EB4D3 /* API.swift */; };
+		4B0B5BD327DD4517005EB4D3 /* StandingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD227DD4517005EB4D3 /* StandingsViewModel.swift */; };
+		4B0B5BD527DD451E005EB4D3 /* StandingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD427DD451E005EB4D3 /* StandingsHeaderView.swift */; };
+		4B0B5BD727DD4547005EB4D3 /* StandingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD627DD4547005EB4D3 /* StandingsResponse.swift */; };
+		4B0B5BD927DD457F005EB4D3 /* StandingsTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD827DD457F005EB4D3 /* StandingsTeamView.swift */; };
+		4B0B5BDB27DD45E2005EB4D3 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BDA27DD45E2005EB4D3 /* Status.swift */; };
+		4B0B5BDE27DD47D3005EB4D3 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BDD27DD47D3005EB4D3 /* ScheduleView.swift */; };
+		4B0B5BE027DD47EC005EB4D3 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BDF27DD47EC005EB4D3 /* ScheduleViewModel.swift */; };
+		4B0B5BE227DD47F5005EB4D3 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BE127DD47F5005EB4D3 /* ScheduleResponse.swift */; };
+		4B0B5BE727DD4839005EB4D3 /* ScoresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BE427DD4839005EB4D3 /* ScoresViewModel.swift */; };
+		4B0B5BE827DD4839005EB4D3 /* ScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BE527DD4839005EB4D3 /* ScoresView.swift */; };
+		4B0B5BE927DD4839005EB4D3 /* ScoresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BE627DD4839005EB4D3 /* ScoresResponse.swift */; };
+		4B0B5BEB27DDBA9B005EB4D3 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BEA27DDBA9B005EB4D3 /* Refreshable.swift */; };
+		4B0B5BED27DDBB1B005EB4D3 /* ScheduledGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BEC27DDBB1B005EB4D3 /* ScheduledGameView.swift */; };
+		4B0B5BEF27DDCFE7005EB4D3 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BEE27DDCFE7005EB4D3 /* GameView.swift */; };
+		4B0B5BF227DDD664005EB4D3 /* LeadersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BF127DDD664005EB4D3 /* LeadersView.swift */; };
+		4B0B5BF427DDD66C005EB4D3 /* LeadersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BF327DDD66C005EB4D3 /* LeadersResponse.swift */; };
+		4B0B5BF627DDD674005EB4D3 /* LeadersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BF527DDD674005EB4D3 /* LeadersViewModel.swift */; };
+		4B0B5BF827DDDA70005EB4D3 /* Skater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BF727DDDA70005EB4D3 /* Skater.swift */; };
+		4B0B5BFA27DDDE60005EB4D3 /* SkatersHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BF927DDDE60005EB4D3 /* SkatersHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +41,28 @@
 		4B0B5BBF27DC791C005EB4D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B0B5BC127DC791E005EB4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0B5BC427DC791E005EB4D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4B0B5BCB27DC7941005EB4D3 /* Warriors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warriors.swift; sourceTree = "<group>"; };
+		4B0B5BCD27DD33C1005EB4D3 /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
+		4B0B5BCF27DD3532005EB4D3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4B0B5BD227DD4517005EB4D3 /* StandingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewModel.swift; sourceTree = "<group>"; };
+		4B0B5BD427DD451E005EB4D3 /* StandingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsHeaderView.swift; sourceTree = "<group>"; };
+		4B0B5BD627DD4547005EB4D3 /* StandingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsResponse.swift; sourceTree = "<group>"; };
+		4B0B5BD827DD457F005EB4D3 /* StandingsTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTeamView.swift; sourceTree = "<group>"; };
+		4B0B5BDA27DD45E2005EB4D3 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		4B0B5BDD27DD47D3005EB4D3 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		4B0B5BDF27DD47EC005EB4D3 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		4B0B5BE127DD47F5005EB4D3 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		4B0B5BE427DD4839005EB4D3 /* ScoresViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewModel.swift; sourceTree = "<group>"; };
+		4B0B5BE527DD4839005EB4D3 /* ScoresView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresView.swift; sourceTree = "<group>"; };
+		4B0B5BE627DD4839005EB4D3 /* ScoresResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresResponse.swift; sourceTree = "<group>"; };
+		4B0B5BEA27DDBA9B005EB4D3 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		4B0B5BEC27DDBB1B005EB4D3 /* ScheduledGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledGameView.swift; sourceTree = "<group>"; };
+		4B0B5BEE27DDCFE7005EB4D3 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		4B0B5BF127DDD664005EB4D3 /* LeadersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersView.swift; sourceTree = "<group>"; };
+		4B0B5BF327DDD66C005EB4D3 /* LeadersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersResponse.swift; sourceTree = "<group>"; };
+		4B0B5BF527DDD674005EB4D3 /* LeadersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersViewModel.swift; sourceTree = "<group>"; };
+		4B0B5BF727DDDA70005EB4D3 /* Skater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skater.swift; sourceTree = "<group>"; };
+		4B0B5BF927DDDE60005EB4D3 /* SkatersHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkatersHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +97,14 @@
 			children = (
 				4B0B5BBD27DC791C005EB4D3 /* warriorsApp.swift */,
 				4B0B5BBF27DC791C005EB4D3 /* ContentView.swift */,
+				4B0B5BDA27DD45E2005EB4D3 /* Status.swift */,
+				4B0B5BEA27DDBA9B005EB4D3 /* Refreshable.swift */,
+				4B0B5BCF27DD3532005EB4D3 /* API.swift */,
+				4B0B5BF027DDD64A005EB4D3 /* Leaders */,
+				4B0B5BD127DD4509005EB4D3 /* Standings */,
+				4B0B5BDC27DD47C8005EB4D3 /* Schedule */,
+				4B0B5BE327DD4839005EB4D3 /* Scores */,
+				4B0B5BCB27DC7941005EB4D3 /* Warriors.swift */,
 				4B0B5BC127DC791E005EB4D3 /* Assets.xcassets */,
 				4B0B5BC327DC791E005EB4D3 /* Preview Content */,
 			);
@@ -65,6 +117,52 @@
 				4B0B5BC427DC791E005EB4D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4B0B5BD127DD4509005EB4D3 /* Standings */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5BCD27DD33C1005EB4D3 /* StandingsView.swift */,
+				4B0B5BD627DD4547005EB4D3 /* StandingsResponse.swift */,
+				4B0B5BD227DD4517005EB4D3 /* StandingsViewModel.swift */,
+				4B0B5BD427DD451E005EB4D3 /* StandingsHeaderView.swift */,
+				4B0B5BD827DD457F005EB4D3 /* StandingsTeamView.swift */,
+			);
+			path = Standings;
+			sourceTree = "<group>";
+		};
+		4B0B5BDC27DD47C8005EB4D3 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5BDD27DD47D3005EB4D3 /* ScheduleView.swift */,
+				4B0B5BEE27DDCFE7005EB4D3 /* GameView.swift */,
+				4B0B5BEC27DDBB1B005EB4D3 /* ScheduledGameView.swift */,
+				4B0B5BDF27DD47EC005EB4D3 /* ScheduleViewModel.swift */,
+				4B0B5BE127DD47F5005EB4D3 /* ScheduleResponse.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		4B0B5BE327DD4839005EB4D3 /* Scores */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5BE427DD4839005EB4D3 /* ScoresViewModel.swift */,
+				4B0B5BE527DD4839005EB4D3 /* ScoresView.swift */,
+				4B0B5BE627DD4839005EB4D3 /* ScoresResponse.swift */,
+			);
+			path = Scores;
+			sourceTree = "<group>";
+		};
+		4B0B5BF027DDD64A005EB4D3 /* Leaders */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5BF127DDD664005EB4D3 /* LeadersView.swift */,
+				4B0B5BF927DDDE60005EB4D3 /* SkatersHeaderView.swift */,
+				4B0B5BF327DDD66C005EB4D3 /* LeadersResponse.swift */,
+				4B0B5BF527DDD674005EB4D3 /* LeadersViewModel.swift */,
+				4B0B5BF727DDDA70005EB4D3 /* Skater.swift */,
+			);
+			path = Leaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +235,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0B5BD327DD4517005EB4D3 /* StandingsViewModel.swift in Sources */,
+				4B0B5BDB27DD45E2005EB4D3 /* Status.swift in Sources */,
 				4B0B5BC027DC791C005EB4D3 /* ContentView.swift in Sources */,
+				4B0B5BCE27DD33C1005EB4D3 /* StandingsView.swift in Sources */,
+				4B0B5BCC27DC7941005EB4D3 /* Warriors.swift in Sources */,
+				4B0B5BD727DD4547005EB4D3 /* StandingsResponse.swift in Sources */,
 				4B0B5BBE27DC791C005EB4D3 /* warriorsApp.swift in Sources */,
+				4B0B5BF827DDDA70005EB4D3 /* Skater.swift in Sources */,
+				4B0B5BE027DD47EC005EB4D3 /* ScheduleViewModel.swift in Sources */,
+				4B0B5BD927DD457F005EB4D3 /* StandingsTeamView.swift in Sources */,
+				4B0B5BE727DD4839005EB4D3 /* ScoresViewModel.swift in Sources */,
+				4B0B5BED27DDBB1B005EB4D3 /* ScheduledGameView.swift in Sources */,
+				4B0B5BF227DDD664005EB4D3 /* LeadersView.swift in Sources */,
+				4B0B5BF427DDD66C005EB4D3 /* LeadersResponse.swift in Sources */,
+				4B0B5BEB27DDBA9B005EB4D3 /* Refreshable.swift in Sources */,
+				4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */,
+				4B0B5BEF27DDCFE7005EB4D3 /* GameView.swift in Sources */,
+				4B0B5BDE27DD47D3005EB4D3 /* ScheduleView.swift in Sources */,
+				4B0B5BD527DD451E005EB4D3 /* StandingsHeaderView.swift in Sources */,
+				4B0B5BFA27DDDE60005EB4D3 /* SkatersHeaderView.swift in Sources */,
+				4B0B5BE927DD4839005EB4D3 /* ScoresResponse.swift in Sources */,
+				4B0B5BF627DDD674005EB4D3 /* LeadersViewModel.swift in Sources */,
+				4B0B5BE827DD4839005EB4D3 /* ScoresView.swift in Sources */,
+				4B0B5BE227DD47F5005EB4D3 /* ScheduleResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
