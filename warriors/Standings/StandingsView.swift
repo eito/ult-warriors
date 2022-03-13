@@ -85,17 +85,17 @@ struct StandingsView: View {
 
                         StandingsTeamView(team: team)
                     }
-                    .contextMenu {
-                        Button("Roster") {
-//                            showRoster(for: team.id)
-                        }
-                        Button("Scores") {
-//                            showScores(for: team.id)
-                        }
-                        Button("Schedule") {
-//                            showSchedule(for: team.id)
-                        }
-                    }
+//                    .contextMenu {
+//                        Button("Roster") {
+////                            showRoster(for: team.id)
+//                        }
+//                        Button("Scores") {
+////                            showScores(for: team.id)
+//                        }
+//                        Button("Schedule") {
+////                            showSchedule(for: team.id)
+//                        }
+//                    }
                 }
             }
         }
