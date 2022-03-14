@@ -15,9 +15,7 @@ struct StandingsResponse: Decodable {
 //    }
 
     struct Team: Identifiable {
-        var id: String {
-            name
-        }
+        var id: Int
         let name: String
         let gp: String
         let w: String
@@ -35,6 +33,7 @@ struct StandingsResponse: Decodable {
     }
 
     struct Result: Decodable {
+        let id: Int
         let fullName: String
         let name: String
         let stats: [Stat]

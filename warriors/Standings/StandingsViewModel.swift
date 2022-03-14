@@ -57,7 +57,6 @@ class StandingsViewModel: ObservableObject {
             var updatedTeams = [StandingsResponse.Team]()
             let response = try await API.fetchResponse(for: request, decodable: StandingsResponse.self)
             for result in response.results {
-                print(result.name)
 
                 var gf, ga, pp, sh, gp, w, l, t, otl, sol, pim, pts, diff: String?
 
@@ -65,43 +64,30 @@ class StandingsViewModel: ObservableObject {
                     switch stat.statTypeId {
                     case 1:
                         gf = stat.displayValue
-//                        print(" GF: \(stat.displayValue)")
                     case 2:
                         ga = stat.displayValue
-//                        print(" GA: \(stat.displayValue)")
                     case 3:
                         pp = stat.displayValue
-//                        print(" PP: \(stat.displayValue)")
                     case 4:
                         sh = stat.displayValue
-//                        print(" SH: \(stat.displayValue)")
                     case 5:
                         gp = stat.displayValue
-//                        print(" GP: \(stat.displayValue)")
                     case 6:
                         w = stat.displayValue
-//                        print("  W: \(stat.displayValue)")
                     case 7:
                         l = stat.displayValue
-//                        print("  L: \(stat.displayValue)")
                     case 8:
                         t = stat.displayValue
-//                        print("  T: \(stat.displayValue)")
                     case 9:
                         otl = stat.displayValue
-//                        print("OTL: \(stat.displayValue)")
                     case 12:
                         sol = stat.displayValue
-//                        print("SOL: \(stat.displayValue)")
                     case 13:
                         pim = stat.displayValue
-//                        print("PIM: \(stat.displayValue)")
                     case 15:
                         pts = stat.displayValue
-//                        print("PTS: \(stat.displayValue)")
                     case 16:
                         diff = stat.displayValue
-//                        print("DIFF: \(stat.displayValue)")
                     default:
                         continue
                     }
@@ -115,6 +101,7 @@ class StandingsViewModel: ObservableObject {
                         return
                     }
                 let team = StandingsResponse.Team(
+                    id: result.id,
                     name: result.name,
                     gp: gp, w: w, l: l, t: t, otl: otl, sol: sol, pts: pts, gf: gf, ga: ga, ppg: ppg, shg: sh, diff: diff, pim: pim)
                 updatedTeams.append(team)
