@@ -43,7 +43,8 @@ struct LeadersView: View {
             }
         }
         .navigationTitle("Leaders")
-        .task {
+        .task(id: viewModel) {
+            guard viewModel.status != .loaded else { return }
             await viewModel.refresh()
         }
     }
