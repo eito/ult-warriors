@@ -51,7 +51,15 @@ struct ScheduleResponse: Decodable {
         }
 
         var status: String {
-            isFinal ? "Final" : ""
+            if isFinal {
+                if periodID == 9 {
+                    return "F/SO"
+                } else {
+                    return "Final"
+                }
+            } else {
+                return ""
+            }
         }
 
         var isAwayTeamWinner: Bool {
@@ -78,6 +86,7 @@ struct ScheduleResponse: Decodable {
         let statusID: Int
         let date: Date
         let startTime: String
+        let periodID: Int?
 
         private enum CodingKeys: String, CodingKey {
             case homeTeamID = "LocalTeamId"
@@ -96,6 +105,7 @@ struct ScheduleResponse: Decodable {
             case statusID = "StatusId"
             case date = "Date"
             case startTime = "StartTime"
+            case periodID = "PeriodId"
         }
     }
 }
