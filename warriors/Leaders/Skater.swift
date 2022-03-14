@@ -18,7 +18,7 @@ struct Skater: Identifiable, Equatable, Hashable {
     let shg: Int
     let gwg: Int
     let pts: Int
-//    let number: String
+    let number: String?
     let name: String
     let team: String
 
@@ -50,6 +50,24 @@ struct Skater: Identifiable, Equatable, Hashable {
         shg = result.stats.first(where: { $0.statTypeId == 27 })?.value ?? -1
         gwg = result.stats.first(where: { $0.statTypeId == 28 })?.value ?? -1
         pts = result.stats.first(where: { $0.statTypeId == 29 })?.value ?? -1
+
+        number = nil
+    }
+
+    init(teamID: Int, playerID: Int, name: String, team: String, goals: Int, assists: Int, pim: Int, gamesPlayed: Int, ppg: Int, shg: Int, gwg: Int, pts: Int, number: String?) {
+        self.teamID = teamID
+        self.playerID = playerID
+        self.name = name
+        self.team = team
+        self.goals = goals
+        self.assists = assists
+        self.pim = pim
+        self.gamesPlayed = gamesPlayed
+        self.ppg = ppg
+        self.shg = shg
+        self.gwg = gwg
+        self.pts = pts
+        self.number = number
     }
 
     static func ==(lhs: Skater, rhs: Skater) -> Bool {

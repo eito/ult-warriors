@@ -67,7 +67,7 @@ struct StandingsView: View {
 
                     ZStack(alignment: .leading) {
                         NavigationLink(
-                            destination: RosterView(seasonID: seasonID, teamID: team.id),
+                            destination: RosterView(seasonID: seasonID, teamID: team.id, teamName: team.name),
                             tag: team.id,
                             selection: $rosterTeamID
                         ) {
