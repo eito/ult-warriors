@@ -37,7 +37,7 @@ class ScoresViewModel: ObservableObject {
 
             var warriorGames = [ScheduleResponse.Game]()
             for game in allGames.filter({ ($0.homeTeamID == teamID || $0.awayTeamID == teamID) && $0.isFinal }) {
-                print("\(game.id)  --- \(game.awayTeamName) @ \(game.homeTeamName)")
+//                print("\(game.id)  --- \(game.awayTeamName) @ \(game.homeTeamName)")
 
                 warriorGames.append(game)
             }
@@ -57,6 +57,6 @@ class ScoresViewModel: ObservableObject {
 extension ScoresViewModel: Equatable {
 
     nonisolated static func ==(lhs: ScoresViewModel, rhs: ScoresViewModel) -> Bool {
-        lhs.teamID == rhs.teamID //&& lhs.refreshDate == rhs.refreshDate
+        lhs.id == rhs.id //&& lhs.refreshDate == rhs.refreshDate
     }
 }
