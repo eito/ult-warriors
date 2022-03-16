@@ -73,7 +73,8 @@ struct GameDetailResponse: Decodable {
 
     struct Event: Decodable {
         let id: Int
-        let periodID: Int
+        let periodID: Int?
+        let teamID: Int
         let gameID: Int
         let qualifier: Int?
         let stats: [Stat]
@@ -83,6 +84,7 @@ struct GameDetailResponse: Decodable {
         private enum CodingKeys: String, CodingKey {
             case id
             case periodID = "periodId"
+            case teamID = "teamId"
             case gameID = "matchId"
             case qualifier
             case stats = "statList"

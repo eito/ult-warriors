@@ -40,6 +40,13 @@
 		4B0B5C0627DF1F94005EB4D3 /* GameDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */; };
 		4B0B5C0827DF1F9C005EB4D3 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */; };
 		4B0B5C0A27DF2053005EB4D3 /* GameDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */; };
+		4B0B5C0C27E1CBD0005EB4D3 /* BoxScoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0B27E1CBD0005EB4D3 /* BoxScoreHeaderView.swift */; };
+		4B0B5C0E27E1CBF3005EB4D3 /* BoxScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0D27E1CBF3005EB4D3 /* BoxScoreView.swift */; };
+		4B0B5C1127E1CC19005EB4D3 /* BoxScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1027E1CC19005EB4D3 /* BoxScore.swift */; };
+		4B0B5C1427E1CFBA005EB4D3 /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1327E1CFBA005EB4D3 /* SummaryViewModel.swift */; };
+		4B0B5C1627E1D3E7005EB4D3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */; };
+		4B0B5C1827E1D42A005EB4D3 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */; };
+		4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +84,13 @@
 		4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
 		4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailResponse.swift; sourceTree = "<group>"; };
+		4B0B5C0B27E1CBD0005EB4D3 /* BoxScoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxScoreHeaderView.swift; sourceTree = "<group>"; };
+		4B0B5C0D27E1CBF3005EB4D3 /* BoxScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxScoreView.swift; sourceTree = "<group>"; };
+		4B0B5C1027E1CC19005EB4D3 /* BoxScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxScore.swift; sourceTree = "<group>"; };
+		4B0B5C1327E1CFBA005EB4D3 /* SummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
+		4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryView.swift; sourceTree = "<group>"; };
+		4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,11 +209,34 @@
 		4B0B5C0427DF1F88005EB4D3 /* GameDetail */ = {
 			isa = PBXGroup;
 			children = (
+				4B0B5C1227E1CFB0005EB4D3 /* Summary */,
+				4B0B5C0F27E1CBFB005EB4D3 /* BoxScore */,
 				4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */,
 				4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */,
 				4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */,
+				4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */,
 			);
 			path = GameDetail;
+			sourceTree = "<group>";
+		};
+		4B0B5C0F27E1CBFB005EB4D3 /* BoxScore */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5C0B27E1CBD0005EB4D3 /* BoxScoreHeaderView.swift */,
+				4B0B5C0D27E1CBF3005EB4D3 /* BoxScoreView.swift */,
+				4B0B5C1027E1CC19005EB4D3 /* BoxScore.swift */,
+			);
+			path = BoxScore;
+			sourceTree = "<group>";
+		};
+		4B0B5C1227E1CFB0005EB4D3 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5C1327E1CFBA005EB4D3 /* SummaryViewModel.swift */,
+				4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */,
+				4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */,
+			);
+			path = Summary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,23 +320,30 @@
 				4B0B5BBE27DC791C005EB4D3 /* warriorsApp.swift in Sources */,
 				4B0B5BFD27DF0B45005EB4D3 /* RosterView.swift in Sources */,
 				4B0B5C0127DF0B76005EB4D3 /* RosterResponse.swift in Sources */,
+				4B0B5C1427E1CFBA005EB4D3 /* SummaryViewModel.swift in Sources */,
 				4B0B5BF827DDDA70005EB4D3 /* Skater.swift in Sources */,
 				4B0B5BE027DD47EC005EB4D3 /* ScheduleViewModel.swift in Sources */,
 				4B0B5C0327DF132F005EB4D3 /* StatType.swift in Sources */,
 				4B0B5BD927DD457F005EB4D3 /* StandingsTeamView.swift in Sources */,
 				4B0B5BE727DD4839005EB4D3 /* ScoresViewModel.swift in Sources */,
+				4B0B5C1627E1D3E7005EB4D3 /* SummaryView.swift in Sources */,
 				4B0B5BED27DDBB1B005EB4D3 /* ScheduledGameView.swift in Sources */,
 				4B0B5BF227DDD664005EB4D3 /* LeadersView.swift in Sources */,
 				4B0B5C0627DF1F94005EB4D3 /* GameDetailViewModel.swift in Sources */,
 				4B0B5BF427DDD66C005EB4D3 /* LeadersResponse.swift in Sources */,
+				4B0B5C1127E1CC19005EB4D3 /* BoxScore.swift in Sources */,
 				4B0B5BEB27DDBA9B005EB4D3 /* Refreshable.swift in Sources */,
+				4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */,
+				4B0B5C0E27E1CBF3005EB4D3 /* BoxScoreView.swift in Sources */,
 				4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */,
 				4B0B5BEF27DDCFE7005EB4D3 /* GameView.swift in Sources */,
 				4B0B5BDE27DD47D3005EB4D3 /* ScheduleView.swift in Sources */,
+				4B0B5C1827E1D42A005EB4D3 /* GoalSummaryView.swift in Sources */,
 				4B0B5BD527DD451E005EB4D3 /* StandingsHeaderView.swift in Sources */,
 				4B0B5BFA27DDDE60005EB4D3 /* SkatersHeaderView.swift in Sources */,
 				4B0B5BFF27DF0B5C005EB4D3 /* RosterViewModel.swift in Sources */,
 				4B0B5BE927DD4839005EB4D3 /* ScoresResponse.swift in Sources */,
+				4B0B5C0C27E1CBD0005EB4D3 /* BoxScoreHeaderView.swift in Sources */,
 				4B0B5BF627DDD674005EB4D3 /* LeadersViewModel.swift in Sources */,
 				4B0B5BE827DD4839005EB4D3 /* ScoresView.swift in Sources */,
 				4B0B5BE227DD47F5005EB4D3 /* ScheduleResponse.swift in Sources */,

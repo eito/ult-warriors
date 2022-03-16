@@ -11,15 +11,76 @@ import SwiftUI
 struct GameDetailView: View {
 
     @ObservedObject var viewModel: GameDetailViewModel
+    @State var shouldShowSummaryInSafari = false
 
     init(game: ScheduleResponse.Game) {
         viewModel = GameDetailViewModel(game: game)
     }
 
     var body: some View {
-        Text("game detail view")
-            .task {
-                await viewModel.refresh()
+
+        ZStack {
+
+            VStack {
+                if let boxScore = viewModel.boxScore {
+                    BoxScoreView(boxScore: boxScore)
+                }
+
+                Picker("", selection: $viewModel.selectedSegmentIndex) {
+                    Text(viewModel.homeTeamName).tag(2)
+                    Text("Summary").tag(0)
+                    Text(viewModel.awayTeamName).tag(3)
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal)
+                .disabled(true)
+    //
+    //            Spacer()
+
+                if let summaryViewModel = viewModel.summaryViewModel {
+                    SummaryView(viewModel: summaryViewModel)
+                }
             }
+            .opacity(viewModel.status == .loaded ? 1.0 : 0.0)
+
+            if viewModel.status == .loading {
+                ProgressView()
+            }
+
+
+            if case .failedToLoad(let error) = viewModel.status {
+                VStack(spacing: 10) {
+                    Text(error.localizedDescription)
+
+                    Button(
+                        action: {
+                            Task {
+                                await viewModel.refresh()
+                            }
+                        },
+                        label: {
+                            Image(systemName: "arrow.clockwise")
+                        }
+                    )
+                }
+            }
+        }
+        .navigationTitle("Summary")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    shouldShowSummaryInSafari.toggle()
+                }) {
+                    Image(systemName: "safari")
+                }
+            }
+        }
+        .sheet(isPresented: $shouldShowSummaryInSafari) {
+            SafariView(url: URL(string: "https://the-rinks-great-park-ice.kreezee-sports.com/scores/game-\(viewModel.id)")!)
+        }
+        .task {
+            await viewModel.refresh()
+        }
     }
 }
