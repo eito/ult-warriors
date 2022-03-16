@@ -11,7 +11,7 @@ struct ScheduleResponse: Decodable {
 
     let games: [Game]
 
-    struct Game: Decodable {
+    struct Game: Decodable, Identifiable {
 
         private static var dateFormatter: DateFormatter = {
             let df = DateFormatter()

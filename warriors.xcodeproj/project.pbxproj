@@ -37,6 +37,9 @@
 		4B0B5BFF27DF0B5C005EB4D3 /* RosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BFE27DF0B5C005EB4D3 /* RosterViewModel.swift */; };
 		4B0B5C0127DF0B76005EB4D3 /* RosterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0027DF0B76005EB4D3 /* RosterResponse.swift */; };
 		4B0B5C0327DF132F005EB4D3 /* StatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0227DF132F005EB4D3 /* StatType.swift */; };
+		4B0B5C0627DF1F94005EB4D3 /* GameDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */; };
+		4B0B5C0827DF1F9C005EB4D3 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */; };
+		4B0B5C0A27DF2053005EB4D3 /* GameDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		4B0B5BFE27DF0B5C005EB4D3 /* RosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewModel.swift; sourceTree = "<group>"; };
 		4B0B5C0027DF0B76005EB4D3 /* RosterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterResponse.swift; sourceTree = "<group>"; };
 		4B0B5C0227DF132F005EB4D3 /* StatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatType.swift; sourceTree = "<group>"; };
+		4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
+		4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
+		4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 		4B0B5BE327DD4839005EB4D3 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				4B0B5C0427DF1F88005EB4D3 /* GameDetail */,
 				4B0B5BE427DD4839005EB4D3 /* ScoresViewModel.swift */,
 				4B0B5BE527DD4839005EB4D3 /* ScoresView.swift */,
 				4B0B5BE627DD4839005EB4D3 /* ScoresResponse.swift */,
@@ -183,6 +190,16 @@
 				4B0B5C0027DF0B76005EB4D3 /* RosterResponse.swift */,
 			);
 			path = Roster;
+			sourceTree = "<group>";
+		};
+		4B0B5C0427DF1F88005EB4D3 /* GameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */,
+				4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */,
+				4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */,
+			);
+			path = GameDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +275,9 @@
 				4B0B5BD327DD4517005EB4D3 /* StandingsViewModel.swift in Sources */,
 				4B0B5BDB27DD45E2005EB4D3 /* Status.swift in Sources */,
 				4B0B5BC027DC791C005EB4D3 /* ContentView.swift in Sources */,
+				4B0B5C0827DF1F9C005EB4D3 /* GameDetailView.swift in Sources */,
 				4B0B5BCE27DD33C1005EB4D3 /* StandingsView.swift in Sources */,
+				4B0B5C0A27DF2053005EB4D3 /* GameDetailResponse.swift in Sources */,
 				4B0B5BCC27DC7941005EB4D3 /* Warriors.swift in Sources */,
 				4B0B5BD727DD4547005EB4D3 /* StandingsResponse.swift in Sources */,
 				4B0B5BBE27DC791C005EB4D3 /* warriorsApp.swift in Sources */,
@@ -271,6 +290,7 @@
 				4B0B5BE727DD4839005EB4D3 /* ScoresViewModel.swift in Sources */,
 				4B0B5BED27DDBB1B005EB4D3 /* ScheduledGameView.swift in Sources */,
 				4B0B5BF227DDD664005EB4D3 /* LeadersView.swift in Sources */,
+				4B0B5C0627DF1F94005EB4D3 /* GameDetailViewModel.swift in Sources */,
 				4B0B5BF427DDD66C005EB4D3 /* LeadersResponse.swift in Sources */,
 				4B0B5BEB27DDBA9B005EB4D3 /* Refreshable.swift in Sources */,
 				4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */,
@@ -412,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"warriors/Preview Content\"";
 				DEVELOPMENT_TEAM = E9GZR66LB7;
 				ENABLE_PREVIEWS = YES;
@@ -429,7 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -445,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"warriors/Preview Content\"";
 				DEVELOPMENT_TEAM = E9GZR66LB7;
 				ENABLE_PREVIEWS = YES;
@@ -462,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

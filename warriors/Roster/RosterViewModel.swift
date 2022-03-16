@@ -86,7 +86,7 @@ class RosterViewModel: ObservableObject {
              sid 7  ------- 4   ASSISTS
              sid 8  ------- 20 2 -- PIM
              sid 9
-             sid 10 --- 17
+             sid 10 --- 17 SAVES
              sid 11
              sid 12
              sid 13
@@ -99,7 +99,7 @@ class RosterViewModel: ObservableObject {
              sid 20
              sid 21
              sid 22 --- 8 GA
-             sid 23 --- 23
+             sid 23 --- 23 SHOTS
              sid 24 --- 72 MIN
              sid 25
              sid 26 ----------- PP

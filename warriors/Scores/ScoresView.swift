@@ -7,10 +7,12 @@
 
 import Foundation
 import SwiftUI
+import SafariServices
 
 struct ScoresView: View {
 
     @ObservedObject var viewModel: ScoresViewModel
+    @State var selectedGame: ScheduleResponse.Game?
 
     init(seasonID: Int, divisionID:Int, teamID: Int) {
         viewModel = ScoresViewModel(seasonID: seasonID, divisionID: divisionID, teamID: teamID)
@@ -58,8 +60,14 @@ struct ScoresView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.games, id: \.id) { game in
-                        GameScoreView(game: game)
-                            .frame(height: 80)
+//                        NavigationLink(destination: GameDetailView(game: game)) {
+                            GameScoreView(game: game)
+                                .frame(height: 80)
+                                .onTapGesture {
+                                    selectedGame = game
+                                }
+//                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding(.horizontal)
@@ -68,6 +76,23 @@ struct ScoresView: View {
         } onRefresh: {
             await viewModel.refresh()
         }
+        .sheet(item: $selectedGame) { game in
+//            Text("\(game.id)")
+            
+            SafariView(url: URL(string: "https://the-rinks-great-park-ice.kreezee-sports.com/scores/game-\(game.id)")!)
+        }
+    }
+}
+
+struct SafariView: UIViewControllerRepresentable {
+    let url: URL
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<Self>) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
+        return
     }
 }
 
