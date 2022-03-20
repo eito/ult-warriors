@@ -47,6 +47,8 @@
 		4B0B5C1627E1D3E7005EB4D3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */; };
 		4B0B5C1827E1D42A005EB4D3 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */; };
 		4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */; };
+		4B7DCFE527E7020800E42862 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DCFE427E7020800E42862 /* TeamViewModel.swift */; };
+		4B7DCFE727E7022900E42862 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DCFE627E7022900E42862 /* TeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,8 @@
 		4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryView.swift; sourceTree = "<group>"; };
 		4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAvatarView.swift; sourceTree = "<group>"; };
+		4B7DCFE427E7020800E42862 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		4B7DCFE627E7022900E42862 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,8 @@
 				4B0B5C0527DF1F94005EB4D3 /* GameDetailViewModel.swift */,
 				4B0B5C0927DF2053005EB4D3 /* GameDetailResponse.swift */,
 				4B0B5C0727DF1F9C005EB4D3 /* GameDetailView.swift */,
+				4B7DCFE427E7020800E42862 /* TeamViewModel.swift */,
+				4B7DCFE627E7022900E42862 /* TeamView.swift */,
 				4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */,
 			);
 			path = GameDetail;
@@ -317,6 +323,7 @@
 				4B0B5C0A27DF2053005EB4D3 /* GameDetailResponse.swift in Sources */,
 				4B0B5BCC27DC7941005EB4D3 /* Warriors.swift in Sources */,
 				4B0B5BD727DD4547005EB4D3 /* StandingsResponse.swift in Sources */,
+				4B7DCFE527E7020800E42862 /* TeamViewModel.swift in Sources */,
 				4B0B5BBE27DC791C005EB4D3 /* warriorsApp.swift in Sources */,
 				4B0B5BFD27DF0B45005EB4D3 /* RosterView.swift in Sources */,
 				4B0B5C0127DF0B76005EB4D3 /* RosterResponse.swift in Sources */,
@@ -335,6 +342,7 @@
 				4B0B5BEB27DDBA9B005EB4D3 /* Refreshable.swift in Sources */,
 				4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */,
 				4B0B5C0E27E1CBF3005EB4D3 /* BoxScoreView.swift in Sources */,
+				4B7DCFE727E7022900E42862 /* TeamView.swift in Sources */,
 				4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */,
 				4B0B5BEF27DDCFE7005EB4D3 /* GameView.swift in Sources */,
 				4B0B5BDE27DD47D3005EB4D3 /* ScheduleView.swift in Sources */,
@@ -493,7 +501,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -526,7 +534,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

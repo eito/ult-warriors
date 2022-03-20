@@ -26,6 +26,8 @@ class GameDetailViewModel: ObservableObject {
 
     @Published var selectedSegmentIndex = 0
     @Published var summaryViewModel: SummaryViewModel? = nil
+    @Published var homeTeamViewModel: TeamViewModel? = nil
+    @Published var awayTeamViewModel: TeamViewModel? = nil
     @Published var status: Status = .idle
 
     init(game: ScheduleResponse.Game) {
@@ -51,6 +53,8 @@ class GameDetailViewModel: ObservableObject {
 
             parseBoxScore(from: response)
             parseSummaryViewModel(from: response)
+            parseHomeTeam(from: response)
+            parseAwayTeam(from: response)
             
             status = .loaded
         } catch {
@@ -61,6 +65,74 @@ class GameDetailViewModel: ObservableObject {
             guard (error as NSError).code != -999 else { return }
             status = .failedToLoad(error)
             print("Error fetching standings: \(error)")
+        }
+    }
+
+    private func parseHomeTeam(from response: GameDetailResponse) {
+        parseTeamViewModel(from: response, for: game.homeTeamID, isHome: true)
+    }
+
+    private func parseAwayTeam(from response: GameDetailResponse) {
+        parseTeamViewModel(from: response, for: game.awayTeamID, isHome: false)
+    }
+
+    private func parseTeamViewModel(from response: GameDetailResponse, for teamID: Int, isHome: Bool) {
+
+        guard let team = response.teams.first(where: { $0.id == teamID }) else {
+            return
+        }
+
+        var skaters = [Skater]()
+
+        for player in team.players {
+
+            if player.stats.isEmpty {
+                continue
+            }
+
+            let goals = player.stats.first(where: { $0.statTypeID == 6 })?.value ?? -1
+            let assists = player.stats.first(where: { $0.statTypeID == 7 })?.value ?? -1
+            let pim = player.stats.first(where: { $0.statTypeID == 8 })?.value ?? -1
+            let ppg = player.stats.first(where: { $0.statTypeID == 26 })?.value ?? -1
+            let shg = player.stats.first(where: { $0.statTypeID == 27 })?.value ?? -1
+            let gwg = player.stats.first(where: { $0.statTypeID == 28 })?.value ?? -1
+            let pts = player.stats.first(where: { $0.statTypeID == 29 })?.value ?? -1
+
+            if goals == -1 || assists == -1 || pim == -1 || ppg == -1 || shg == -1 ||
+                gwg == -1 || pts == -1 {
+                continue
+            }
+
+            let skater = Skater(
+                teamID: player.teamID,
+                playerID: player.id,
+                name: player.name,
+                team: team.name,
+                goals: goals,
+                assists: assists,
+                pim: pim / 10,
+                gamesPlayed: 0,
+                ppg: ppg,
+                shg: shg,
+                gwg: gwg,
+                pts: pts,
+                number: player.number
+            )
+            skaters.append(skater)
+        }
+
+        skaters = skaters.sorted { s1, s2 in
+            if s1.pts == s2.pts {
+                return s1.goals > s2.goals
+            } else {
+                return s1.pts > s2.pts
+            }
+        }
+
+        if isHome {
+            homeTeamViewModel = TeamViewModel(teamName: team.name, skaters: skaters)
+        } else {
+            awayTeamViewModel = TeamViewModel(teamName: team.name, skaters: skaters)
         }
     }
 
@@ -143,7 +215,7 @@ class GameDetailViewModel: ObservableObject {
         let homeTeamName = response.homeTeamName
         let homeTeamScore = response.homeScore
 
-        let awayTeamID = response.awayTeamID
+//        let awayTeamID = response.awayTeamID
         let awayTeamName = response.awayTeamName
         let awayTeamScore = response.awayScore
 

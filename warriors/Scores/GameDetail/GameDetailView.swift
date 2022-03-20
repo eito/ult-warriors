@@ -33,11 +33,15 @@ struct GameDetailView: View {
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
-                .disabled(true)
+                .disabled(viewModel.homeTeamViewModel == nil || viewModel.awayTeamViewModel == nil)
     //
     //            Spacer()
 
-                if let summaryViewModel = viewModel.summaryViewModel {
+                if viewModel.selectedSegmentIndex == 2, let homeTeamViewModel = viewModel.homeTeamViewModel {
+                    TeamView(viewModel: homeTeamViewModel)
+                } else if viewModel.selectedSegmentIndex == 3, let awayTeamViewModel = viewModel.awayTeamViewModel {
+                    TeamView(viewModel: awayTeamViewModel)
+                } else if viewModel.selectedSegmentIndex == 0, let summaryViewModel = viewModel.summaryViewModel {
                     SummaryView(viewModel: summaryViewModel)
                 }
             }
