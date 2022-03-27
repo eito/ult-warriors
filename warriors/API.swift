@@ -151,6 +151,23 @@ enum API {
 
          */
     }
+
+    static func fetchSchedule(forTeamID teamID: Int, seasonID: Int) async throws -> [ScheduleResponse.Game] {
+
+        let url = URL(string: "https://the-rinks-great-park-ice.kreezee-sports.com/api/v2/solutions/20151/seasons/\(seasonID)/schedule")!
+        let request = URLRequest(url: url)
+
+        let allGames = try await API.fetchResponse(for: request, decodable: [ScheduleResponse.Game].self)
+
+        var scheduledGames = [ScheduleResponse.Game]()
+        for game in allGames.filter({ ($0.homeTeamID == teamID || $0.awayTeamID == teamID) && !$0.isFinal }) {
+//                print("\(game.id)  --- \(game.awayTeamName) @ \(game.homeTeamName)")
+
+            scheduledGames.append(game)
+        }
+
+        return scheduledGames
+    }
 }
 
 extension DateFormatter {

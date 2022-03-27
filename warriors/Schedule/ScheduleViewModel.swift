@@ -30,20 +30,8 @@ class ScheduleViewModel: ObservableObject {
         status = .loading
 
         do {
-
-            let url = URL(string: "https://the-rinks-great-park-ice.kreezee-sports.com/api/v2/solutions/20151/seasons/\(seasonID)/schedule")!
-            let request = URLRequest(url: url)
-
-            let allGames = try await API.fetchResponse(for: request, decodable: [ScheduleResponse.Game].self)
-
-            var warriorGames = [ScheduleResponse.Game]()
-            for game in allGames.filter({ ($0.homeTeamID == teamID || $0.awayTeamID == teamID) && !$0.isFinal }) {
-//                print("\(game.id)  --- \(game.awayTeamName) @ \(game.homeTeamName)")
-
-                warriorGames.append(game)
-            }
+            games = try await API.fetchSchedule(forTeamID: teamID, seasonID: seasonID)
             status = .loaded
-            games = warriorGames
         } catch {
             // HACK: because this is called twice it cancels and temporarily
             // shows the cancelled message
