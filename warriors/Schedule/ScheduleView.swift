@@ -28,6 +28,11 @@ struct ScheduleView: View {
 
             if viewModel.status == .loading {
                 ProgressView()
+            } else if viewModel.status == .loaded, viewModel.games.isEmpty {
+                Text("No scheduled games")
+                    .foregroundColor(.secondary)
+                    .font(.title)
+                    .fontWeight(.semibold)
             }
 
             if case .failedToLoad(let error) = viewModel.status {
