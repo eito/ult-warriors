@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import SafariServices
 
 struct ScoresView: View {
 
@@ -29,6 +28,11 @@ struct ScoresView: View {
 
             if viewModel.status == .loading {
                 ProgressView()
+            } else if viewModel.status == .loaded, viewModel.games.isEmpty {
+                Text("No games yet :(")
+                    .foregroundColor(.secondary)
+                    .font(.title)
+                    .fontWeight(.semibold)
             }
 
             if case .failedToLoad(let error) = viewModel.status {
@@ -71,81 +75,5 @@ struct ScoresView: View {
         } onRefresh: {
             await viewModel.refresh()
         }
-    }
-}
-
-struct SafariView: UIViewControllerRepresentable {
-    let url: URL
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<Self>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
-        return
-    }
-}
-
-struct GameScoreView: View {
-
-    let game: ScheduleResponse.Game
-
-    var body: some View {
-        ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 8.0)
-                .foregroundColor(Color(.secondarySystemFill))
-
-            VStack(spacing: 8) {
-
-                gameStatus
-
-                HStack {
-                    teamNames
-
-                    Spacer()
-
-                    teamScores
-                }
-            }
-            .padding(EdgeInsets(top: 8.0, leading: 8.0, bottom: 8.0, trailing: 16.0))
-        }
-    }
-
-    private var gameStatus: some View {
-        HStack {
-            Text(game.dateString)
-            Spacer()
-            Text(game.status)
-        }
-        .font(.footnote)
-        .foregroundColor(.secondary)
-    }
-
-    private var teamNames: some View {
-        VStack(alignment: .leading, spacing: 4.0) {
-            Text("\(game.awayTeamName)")
-                .fontWeight(game.isAwayTeamWinner ? .semibold : .regular)
-                .foregroundColor(game.isAwayTeamWinner ? .primary : .secondary)
-
-            Text("\(game.homeTeamName)")
-                .fontWeight(game.isHomeTeamWinner ? .semibold : .regular)
-                .foregroundColor(game.isHomeTeamWinner ? .primary : .secondary)
-        }
-        .font(.footnote)
-        .lineLimit(1)
-    }
-
-    private var teamScores: some View {
-        VStack(alignment: .trailing, spacing: 4.0) {
-            Text("\(game.awayScore)")
-                .fontWeight(game.isAwayTeamWinner ? .semibold : .regular)
-                .foregroundColor(game.isAwayTeamWinner ? .primary : .secondary)
-
-            Text("\(game.homeScore)")
-                .fontWeight(game.isHomeTeamWinner ? .semibold : .regular)
-                .foregroundColor(game.isHomeTeamWinner ? .primary : .secondary)
-        }
-        .foregroundColor(.secondary)
-        .font(.footnote)
     }
 }

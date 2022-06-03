@@ -47,6 +47,8 @@
 		4B0B5C1627E1D3E7005EB4D3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */; };
 		4B0B5C1827E1D42A005EB4D3 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */; };
 		4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */; };
+		4B53F7252849EA5C00A7EDBE /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F7242849EA5C00A7EDBE /* SafariView.swift */; };
+		4B53F7272849EA7A00A7EDBE /* GameScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F7262849EA7A00A7EDBE /* GameScoresView.swift */; };
 		4B7DCFE527E7020800E42862 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DCFE427E7020800E42862 /* TeamViewModel.swift */; };
 		4B7DCFE727E7022900E42862 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DCFE627E7022900E42862 /* TeamView.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,8 @@
 		4B0B5C1527E1D3E7005EB4D3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryView.swift; sourceTree = "<group>"; };
 		4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAvatarView.swift; sourceTree = "<group>"; };
+		4B53F7242849EA5C00A7EDBE /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		4B53F7262849EA7A00A7EDBE /* GameScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoresView.swift; sourceTree = "<group>"; };
 		4B7DCFE427E7020800E42862 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		4B7DCFE627E7022900E42862 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,7 @@
 			children = (
 				4B0B5BBD27DC791C005EB4D3 /* warriorsApp.swift */,
 				4B0B5BBF27DC791C005EB4D3 /* ContentView.swift */,
+				4B53F7242849EA5C00A7EDBE /* SafariView.swift */,
 				4B0B5BDA27DD45E2005EB4D3 /* Status.swift */,
 				4B0B5BEA27DDBA9B005EB4D3 /* Refreshable.swift */,
 				4B0B5BCF27DD3532005EB4D3 /* API.swift */,
@@ -183,6 +188,7 @@
 				4B0B5C0427DF1F88005EB4D3 /* GameDetail */,
 				4B0B5BE427DD4839005EB4D3 /* ScoresViewModel.swift */,
 				4B0B5BE527DD4839005EB4D3 /* ScoresView.swift */,
+				4B53F7262849EA7A00A7EDBE /* GameScoresView.swift */,
 				4B0B5BE627DD4839005EB4D3 /* ScoresResponse.swift */,
 			);
 			path = Scores;
@@ -316,6 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0B5BD327DD4517005EB4D3 /* StandingsViewModel.swift in Sources */,
+				4B53F7272849EA7A00A7EDBE /* GameScoresView.swift in Sources */,
+				4B53F7252849EA5C00A7EDBE /* SafariView.swift in Sources */,
 				4B0B5BDB27DD45E2005EB4D3 /* Status.swift in Sources */,
 				4B0B5BC027DC791C005EB4D3 /* ContentView.swift in Sources */,
 				4B0B5C0827DF1F9C005EB4D3 /* GameDetailView.swift in Sources */,
@@ -501,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -534,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

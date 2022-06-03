@@ -17,7 +17,9 @@ struct BronzeCentralDivisionIDKey: EnvironmentKey {
 }
 
 struct CurrentSeasonIDKey: EnvironmentKey {
-    static let defaultValue = 10991
+    // Spring 2022 = 10991
+    // Summer 2022 = 11288
+    static let defaultValue = 11288
 }
 
 extension EnvironmentValues {

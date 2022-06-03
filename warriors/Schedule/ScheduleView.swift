@@ -8,9 +8,17 @@
 import Foundation
 import SwiftUI
 
+extension Int: Identifiable {
+    public var id: String {
+        "\(self)"
+    }
+}
+
 struct ScheduleView: View {
 
     @ObservedObject var viewModel: ScheduleViewModel
+
+    @State var selectedGameID: Int? = nil
 
     init(seasonID: Int, divisionID:Int, teamID: Int) {
         viewModel = ScheduleViewModel(seasonID: seasonID, divisionID: divisionID, teamID: teamID)
@@ -64,8 +72,14 @@ struct ScheduleView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.games, id: \.id) { game in
 //                        Scheduled
-                        GameView(game: game)
-                            .frame(height: 80)
+                        Button(action: { selectedGameID = game.id }) {
+                            GameView(game: game)
+                                .frame(height: 80)
+                        }
+                        .buttonStyle(.plain)
+                        .sheet(item: $selectedGameID) { id in
+                            SafariView(url: URL(string: "https://the-rinks-great-park-ice.kreezee-sports.com/scores/game-\(id)")!)
+                        }
                     }
                 }
                 .padding(.horizontal)

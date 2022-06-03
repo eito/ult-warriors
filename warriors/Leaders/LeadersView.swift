@@ -23,6 +23,11 @@ struct LeadersView: View {
 
             if viewModel.status == .loading {
                 ProgressView()
+            } else if viewModel.status == .loaded, viewModel.skaters.isEmpty {
+                Text("No games played yet?")
+                    .foregroundColor(.secondary)
+                    .font(.title)
+                    .fontWeight(.semibold)
             }
 
             if case .failedToLoad(let error) = viewModel.status {
