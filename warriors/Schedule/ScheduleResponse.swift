@@ -9,7 +9,7 @@ import Foundation
 
 struct ScheduleResponse: Decodable {
 
-    let games: [Game]
+    let games: [GameResponse]
 
     struct Game: Decodable, Identifiable {
 
@@ -75,6 +75,76 @@ struct ScheduleResponse: Decodable {
         let homeDivisionID: Int
         let homeScore: Int
         let awayTeamID: Int
+        let awayTeamName: String
+        let awayDivisionID: Int
+        let awayScore: Int
+
+        let isFinal: Bool
+        let id: Int
+        let seasonID: Int
+        let rinkName: String
+        let statusID: Int
+        let date: Date
+        let startTime: String
+        let periodID: Int?
+
+        private enum CodingKeys: String, CodingKey {
+            case homeTeamID = "LocalTeamId"
+            case homeTeamName = "LocalTeamName"
+            case homeScore = "LocalResult"
+            case homeDivisionID = "LocalDivisionId"
+            case awayTeamID = "VisitorTeamId"
+            case awayTeamName = "VisitorTeamName"
+            case awayScore = "VisitorResult"
+            case awayDivisionID = "VisitorDivisionId"
+
+            case isFinal = "Final"
+            case id = "Id"
+            case seasonID = "SeasonId"
+            case rinkName = "SportCenterName"
+            case statusID = "StatusId"
+            case date = "Date"
+            case startTime = "StartTime"
+            case periodID = "PeriodId"
+        }
+
+        init?(response: GameResponse) {
+
+            guard
+                let homeTeamID = response.homeTeamID,
+                let awayTeamID = response.awayTeamID
+            else {
+                return nil
+            }
+
+            self.homeTeamID = homeTeamID
+            self.awayTeamID = awayTeamID
+
+            homeTeamName = response.homeTeamName
+            homeDivisionID = response.homeDivisionID
+            homeScore = response.homeScore
+            awayTeamName = response.awayTeamName
+            awayDivisionID = response.awayDivisionID
+            awayScore = response.awayScore
+
+            isFinal = response.isFinal
+            id = response.id
+            seasonID = response.seasonID
+            rinkName = response.rinkName
+            statusID = response.statusID
+            date = response.date
+            startTime = response.startTime
+            periodID = response.periodID
+        }
+    }
+
+    struct GameResponse: Decodable, Identifiable {
+
+        let homeTeamID: Int?
+        let homeTeamName: String
+        let homeDivisionID: Int
+        let homeScore: Int
+        let awayTeamID: Int?
         let awayTeamName: String
         let awayDivisionID: Int
         let awayScore: Int

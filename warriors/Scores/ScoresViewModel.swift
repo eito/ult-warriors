@@ -33,7 +33,9 @@ class ScoresViewModel: ObservableObject {
             let url = URL(string: "https://the-rinks-great-park-ice.kreezee-sports.com/api/v2/solutions/20151/seasons/\(seasonID)/schedule")!
             let request = URLRequest(url: url)
 
-            let allGames = try await API.fetchResponse(for: request, decodable: [ScheduleResponse.Game].self)
+            let allGamesResponses = try await API.fetchResponse(for: request, decodable: [ScheduleResponse.GameResponse].self)
+
+            let allGames = allGamesResponses.compactMap { ScheduleResponse.Game(response: $0) }
 
             var warriorGames = [ScheduleResponse.Game]()
             for game in allGames.filter({ ($0.homeTeamID == teamID || $0.awayTeamID == teamID) && $0.isFinal }) {
