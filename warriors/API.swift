@@ -170,6 +170,14 @@ enum API {
 
         return scheduledGames
     }
+
+    static func fetchConfiguration() async throws -> Configuration {
+
+        let url = URL(string: "https://eito.github.io/warriors/app.json")!
+        let request = URLRequest(url: url)
+
+        return try await API.fetchResponse(for: request, decodable: Configuration.self)
+    }
 }
 
 extension DateFormatter {
