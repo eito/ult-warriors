@@ -171,6 +171,13 @@ enum API {
         return scheduledGames
     }
 
+    static func fetchNextGame(forTeamID teamID: Int, seasonID: Int) async throws -> ScheduleResponse.Game? {
+
+        let games = try await fetchSchedule(forTeamID: teamID, seasonID: seasonID)
+
+        return games.first(where: { !$0.isFinal })
+    }
+
     static func fetchConfiguration() async throws -> Configuration {
 
         let url = URL(string: "https://eito.github.io/warriors/app.json")!
