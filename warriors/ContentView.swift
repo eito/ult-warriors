@@ -18,6 +18,17 @@ struct ContentView: View {
     var body: some View {
         progressOrContentView
         .task {
+
+//            if let existingDefaults = UserDefaults(suiteName: "group.com.ericito.ult-warriors") {
+//                print("reading values...")
+//
+//                let teamID = existingDefaults.integer(forKey: "teamID")
+//                let seasonID = existingDefaults.integer(forKey: "seasonID")
+//                let divisionID = existingDefaults.integer(forKey: "divisionID")
+//
+//                print("tid: \(teamID)\nsid: \(seasonID)\ndid: \(divisionID)")
+//            }
+            
             isLoading = true
 
             defer {
@@ -38,6 +49,13 @@ struct ContentView: View {
                 warriorsTeamID = configuration.teamID
                 currentSeasonID = configuration.seasonID
                 bronzeCentralDivisionID = configuration.divisionID
+
+                if let defaults = UserDefaults(suiteName: "group.com.ericito.ult-warriors") {
+                    print("setting values...")
+                    defaults.set(warriorsTeamID, forKey: "teamID")
+                    defaults.set(currentSeasonID, forKey: "seasonID")
+                    defaults.set(bronzeCentralDivisionID, forKey: "divisionID")
+                }
 
                 if let game = try await API.fetchNextGame(forTeamID: warriorsTeamID, seasonID: currentSeasonID) {
                     print("Found next game: \(game)")

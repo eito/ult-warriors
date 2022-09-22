@@ -13,7 +13,7 @@
 		4B0B5BC527DC791E005EB4D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0B5BC427DC791E005EB4D3 /* Preview Assets.xcassets */; };
 		4B0B5BCC27DC7941005EB4D3 /* Warriors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCB27DC7941005EB4D3 /* Warriors.swift */; };
 		4B0B5BCE27DD33C1005EB4D3 /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCD27DD33C1005EB4D3 /* StandingsView.swift */; };
-		4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCF27DD3532005EB4D3 /* API.swift */; };
+		4B0B5BD027DD3532005EB4D3 /* API+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BCF27DD3532005EB4D3 /* API+App.swift */; };
 		4B0B5BD327DD4517005EB4D3 /* StandingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD227DD4517005EB4D3 /* StandingsViewModel.swift */; };
 		4B0B5BD527DD451E005EB4D3 /* StandingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD427DD451E005EB4D3 /* StandingsHeaderView.swift */; };
 		4B0B5BD727DD4547005EB4D3 /* StandingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BD627DD4547005EB4D3 /* StandingsResponse.swift */; };
@@ -48,11 +48,46 @@
 		4B0B5C1827E1D42A005EB4D3 /* GoalSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */; };
 		4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */; };
 		4B1CCB0B28D6E81700DFBF54 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB0A28D6E81700DFBF54 /* Configuration.swift */; };
+		4B1CCB1328D6F13100DFBF54 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1CCB1228D6F13100DFBF54 /* WidgetKit.framework */; };
+		4B1CCB1528D6F13100DFBF54 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1CCB1428D6F13100DFBF54 /* SwiftUI.framework */; };
+		4B1CCB1828D6F13100DFBF54 /* NextGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB1728D6F13100DFBF54 /* NextGame.swift */; };
+		4B1CCB1A28D6F13300DFBF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1CCB1928D6F13300DFBF54 /* Assets.xcassets */; };
+		4B1CCB1E28D6F13300DFBF54 /* NextGameExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4B1CCB1028D6F13100DFBF54 /* NextGameExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4B1CCB2828D6F61600DFBF54 /* API+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB2728D6F61600DFBF54 /* API+Shared.swift */; };
+		4B1CCB2928D6F61600DFBF54 /* API+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB2728D6F61600DFBF54 /* API+Shared.swift */; };
+		4B1CCB2A28D6F65F00DFBF54 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0B5BE127DD47F5005EB4D3 /* ScheduleResponse.swift */; };
+		4B1CCB2C28D6F69800DFBF54 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB2B28D6F69800DFBF54 /* DateFormatter+Extensions.swift */; };
+		4B1CCB2D28D6F69800DFBF54 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB2B28D6F69800DFBF54 /* DateFormatter+Extensions.swift */; };
+		4B1CCB3228D6FE2200DFBF54 /* NextGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CCB3128D6FE2200DFBF54 /* NextGameView.swift */; };
 		4B53F7252849EA5C00A7EDBE /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F7242849EA5C00A7EDBE /* SafariView.swift */; };
 		4B53F7272849EA7A00A7EDBE /* GameScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B53F7262849EA7A00A7EDBE /* GameScoresView.swift */; };
 		4B7DCFE527E7020800E42862 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DCFE427E7020800E42862 /* TeamViewModel.swift */; };
 		4B7DCFE727E7022900E42862 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7DCFE627E7022900E42862 /* TeamView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B1CCB1C28D6F13300DFBF54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B0B5BB227DC791C005EB4D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1CCB0F28D6F13100DFBF54;
+			remoteInfo = NextGameExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B1CCB2228D6F13300DFBF54 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4B1CCB1E28D6F13300DFBF54 /* NextGameExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B0B5BBA27DC791C005EB4D3 /* Warriors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warriors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +97,7 @@
 		4B0B5BC427DC791E005EB4D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B0B5BCB27DC7941005EB4D3 /* Warriors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warriors.swift; sourceTree = "<group>"; };
 		4B0B5BCD27DD33C1005EB4D3 /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsView.swift; sourceTree = "<group>"; };
-		4B0B5BCF27DD3532005EB4D3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4B0B5BCF27DD3532005EB4D3 /* API+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+App.swift"; sourceTree = "<group>"; };
 		4B0B5BD227DD4517005EB4D3 /* StandingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewModel.swift; sourceTree = "<group>"; };
 		4B0B5BD427DD451E005EB4D3 /* StandingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsHeaderView.swift; sourceTree = "<group>"; };
 		4B0B5BD627DD4547005EB4D3 /* StandingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsResponse.swift; sourceTree = "<group>"; };
@@ -97,6 +132,17 @@
 		4B0B5C1727E1D42A005EB4D3 /* GoalSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSummaryView.swift; sourceTree = "<group>"; };
 		4B0B5C1927E1D445005EB4D3 /* TeamAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAvatarView.swift; sourceTree = "<group>"; };
 		4B1CCB0A28D6E81700DFBF54 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4B1CCB1028D6F13100DFBF54 /* NextGameExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NextGameExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1CCB1228D6F13100DFBF54 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4B1CCB1428D6F13100DFBF54 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4B1CCB1728D6F13100DFBF54 /* NextGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextGame.swift; sourceTree = "<group>"; };
+		4B1CCB1928D6F13300DFBF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B1CCB1B28D6F13300DFBF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B1CCB2328D6F39500DFBF54 /* Warriors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Warriors.entitlements; path = Warriors/Warriors.entitlements; sourceTree = "<group>"; };
+		4B1CCB2728D6F61600DFBF54 /* API+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Shared.swift"; sourceTree = "<group>"; };
+		4B1CCB2B28D6F69800DFBF54 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		4B1CCB2E28D6FB2000DFBF54 /* NextGameExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NextGameExtension.entitlements; sourceTree = "<group>"; };
+		4B1CCB3128D6FE2200DFBF54 /* NextGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextGameView.swift; sourceTree = "<group>"; };
 		4B53F7242849EA5C00A7EDBE /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		4B53F7262849EA7A00A7EDBE /* GameScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoresView.swift; sourceTree = "<group>"; };
 		4B7DCFE427E7020800E42862 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
@@ -111,13 +157,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4B1CCB0D28D6F13100DFBF54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B1CCB1528D6F13100DFBF54 /* SwiftUI.framework in Frameworks */,
+				4B1CCB1328D6F13100DFBF54 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		4B0B5BB127DC791C005EB4D3 = {
 			isa = PBXGroup;
 			children = (
+				4B1CCB2E28D6FB2000DFBF54 /* NextGameExtension.entitlements */,
+				4B1CCB2328D6F39500DFBF54 /* Warriors.entitlements */,
+				4B1CCB2428D6F58C00DFBF54 /* Shared */,
 				4B0B5BBC27DC791C005EB4D3 /* warriors */,
+				4B1CCB1628D6F13100DFBF54 /* NextGame */,
+				4B1CCB1128D6F13100DFBF54 /* Frameworks */,
 				4B0B5BBB27DC791C005EB4D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4B0B5BBA27DC791C005EB4D3 /* Warriors.app */,
+				4B1CCB1028D6F13100DFBF54 /* NextGameExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,8 +199,8 @@
 				4B53F7242849EA5C00A7EDBE /* SafariView.swift */,
 				4B1CCB0A28D6E81700DFBF54 /* Configuration.swift */,
 				4B0B5BDA27DD45E2005EB4D3 /* Status.swift */,
+				4B0B5BCF27DD3532005EB4D3 /* API+App.swift */,
 				4B0B5BEA27DDBA9B005EB4D3 /* Refreshable.swift */,
-				4B0B5BCF27DD3532005EB4D3 /* API.swift */,
 				4B0B5C0227DF132F005EB4D3 /* StatType.swift */,
 				4B0B5BFB27DF0B08005EB4D3 /* Roster */,
 				4B0B5BF027DDD64A005EB4D3 /* Leaders */,
@@ -176,11 +237,10 @@
 		4B0B5BDC27DD47C8005EB4D3 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				4B0B5BDD27DD47D3005EB4D3 /* ScheduleView.swift */,
-				4B0B5BEE27DDCFE7005EB4D3 /* GameView.swift */,
 				4B0B5BEC27DDBB1B005EB4D3 /* ScheduledGameView.swift */,
+				4B0B5BEE27DDCFE7005EB4D3 /* GameView.swift */,
+				4B0B5BDD27DD47D3005EB4D3 /* ScheduleView.swift */,
 				4B0B5BDF27DD47EC005EB4D3 /* ScheduleViewModel.swift */,
-				4B0B5BE127DD47F5005EB4D3 /* ScheduleResponse.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -254,6 +314,36 @@
 			path = Summary;
 			sourceTree = "<group>";
 		};
+		4B1CCB1128D6F13100DFBF54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B1CCB1228D6F13100DFBF54 /* WidgetKit.framework */,
+				4B1CCB1428D6F13100DFBF54 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B1CCB1628D6F13100DFBF54 /* NextGame */ = {
+			isa = PBXGroup;
+			children = (
+				4B1CCB1728D6F13100DFBF54 /* NextGame.swift */,
+				4B1CCB3128D6FE2200DFBF54 /* NextGameView.swift */,
+				4B1CCB1928D6F13300DFBF54 /* Assets.xcassets */,
+				4B1CCB1B28D6F13300DFBF54 /* Info.plist */,
+			);
+			path = NextGame;
+			sourceTree = "<group>";
+		};
+		4B1CCB2428D6F58C00DFBF54 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4B1CCB2728D6F61600DFBF54 /* API+Shared.swift */,
+				4B1CCB2B28D6F69800DFBF54 /* DateFormatter+Extensions.swift */,
+				4B0B5BE127DD47F5005EB4D3 /* ScheduleResponse.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,15 +354,34 @@
 				4B0B5BB627DC791C005EB4D3 /* Sources */,
 				4B0B5BB727DC791C005EB4D3 /* Frameworks */,
 				4B0B5BB827DC791C005EB4D3 /* Resources */,
+				4B1CCB2228D6F13300DFBF54 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4B1CCB1D28D6F13300DFBF54 /* PBXTargetDependency */,
 			);
 			name = Warriors;
 			productName = warriors;
 			productReference = 4B0B5BBA27DC791C005EB4D3 /* Warriors.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4B1CCB0F28D6F13100DFBF54 /* NextGameExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B1CCB1F28D6F13300DFBF54 /* Build configuration list for PBXNativeTarget "NextGameExtension" */;
+			buildPhases = (
+				4B1CCB0C28D6F13100DFBF54 /* Sources */,
+				4B1CCB0D28D6F13100DFBF54 /* Frameworks */,
+				4B1CCB0E28D6F13100DFBF54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NextGameExtension;
+			productName = NextGameExtension;
+			productReference = 4B1CCB1028D6F13100DFBF54 /* NextGameExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -281,11 +390,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					4B0B5BB927DC791C005EB4D3 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					4B1CCB0F28D6F13100DFBF54 = {
+						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
@@ -303,6 +415,7 @@
 			projectRoot = "";
 			targets = (
 				4B0B5BB927DC791C005EB4D3 /* Warriors */,
+				4B1CCB0F28D6F13100DFBF54 /* NextGameExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -314,6 +427,14 @@
 			files = (
 				4B0B5BC527DC791E005EB4D3 /* Preview Assets.xcassets in Resources */,
 				4B0B5BC227DC791E005EB4D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1CCB0E28D6F13100DFBF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B1CCB1A28D6F13300DFBF54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +456,7 @@
 				4B0B5BCC27DC7941005EB4D3 /* Warriors.swift in Sources */,
 				4B1CCB0B28D6E81700DFBF54 /* Configuration.swift in Sources */,
 				4B0B5BD727DD4547005EB4D3 /* StandingsResponse.swift in Sources */,
+				4B1CCB2828D6F61600DFBF54 /* API+Shared.swift in Sources */,
 				4B7DCFE527E7020800E42862 /* TeamViewModel.swift in Sources */,
 				4B0B5BBE27DC791C005EB4D3 /* warriorsApp.swift in Sources */,
 				4B0B5BFD27DF0B45005EB4D3 /* RosterView.swift in Sources */,
@@ -355,7 +477,7 @@
 				4B0B5C1A27E1D445005EB4D3 /* TeamAvatarView.swift in Sources */,
 				4B0B5C0E27E1CBF3005EB4D3 /* BoxScoreView.swift in Sources */,
 				4B7DCFE727E7022900E42862 /* TeamView.swift in Sources */,
-				4B0B5BD027DD3532005EB4D3 /* API.swift in Sources */,
+				4B0B5BD027DD3532005EB4D3 /* API+App.swift in Sources */,
 				4B0B5BEF27DDCFE7005EB4D3 /* GameView.swift in Sources */,
 				4B0B5BDE27DD47D3005EB4D3 /* ScheduleView.swift in Sources */,
 				4B0B5C1827E1D42A005EB4D3 /* GoalSummaryView.swift in Sources */,
@@ -367,10 +489,31 @@
 				4B0B5BF627DDD674005EB4D3 /* LeadersViewModel.swift in Sources */,
 				4B0B5BE827DD4839005EB4D3 /* ScoresView.swift in Sources */,
 				4B0B5BE227DD47F5005EB4D3 /* ScheduleResponse.swift in Sources */,
+				4B1CCB2C28D6F69800DFBF54 /* DateFormatter+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1CCB0C28D6F13100DFBF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B1CCB1828D6F13100DFBF54 /* NextGame.swift in Sources */,
+				4B1CCB2928D6F61600DFBF54 /* API+Shared.swift in Sources */,
+				4B1CCB2D28D6F69800DFBF54 /* DateFormatter+Extensions.swift in Sources */,
+				4B1CCB3228D6FE2200DFBF54 /* NextGameView.swift in Sources */,
+				4B1CCB2A28D6F65F00DFBF54 /* ScheduleResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B1CCB1D28D6F13300DFBF54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B1CCB0F28D6F13100DFBF54 /* NextGameExtension */;
+			targetProxy = 4B1CCB1C28D6F13300DFBF54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B0B5BC627DC791E005EB4D3 /* Debug */ = {
@@ -493,8 +636,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALTERNATE_GROUP = "";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Warriors/Warriors.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"warriors/Preview Content\"";
@@ -526,8 +671,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALTERNATE_GROUP = "";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Warriors/Warriors.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"warriors/Preview Content\"";
@@ -555,6 +702,66 @@
 			};
 			name = Release;
 		};
+		4B1CCB2028D6F13300DFBF54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = NextGameExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E9GZR66LB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NextGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NextGame;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors.NextGame";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B1CCB2128D6F13300DFBF54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = NextGameExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E9GZR66LB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NextGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NextGame;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericito.ult-warriors.NextGame";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +779,15 @@
 			buildConfigurations = (
 				4B0B5BC927DC791E005EB4D3 /* Debug */,
 				4B0B5BCA27DC791E005EB4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B1CCB1F28D6F13300DFBF54 /* Build configuration list for PBXNativeTarget "NextGameExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1CCB2028D6F13300DFBF54 /* Debug */,
+				4B1CCB2128D6F13300DFBF54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
